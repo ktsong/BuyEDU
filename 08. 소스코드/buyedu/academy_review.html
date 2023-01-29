@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - SB Admin</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="main.html">Buy! EDU<br>학원정보 서비스</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+<!--  Left Menu  Layer -->
+
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading"> </div>
+                            <a class="nav-link" href="main.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                등록현황
+                            </a>
+                         <a class="nav-link" href="academy_list.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                학원 정보
+                            </a>
+                         <a class="nav-link" href="academy_review.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                수강 후기
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        관리자
+                    </div>
+                </nav>
+            </div>
+
+<!--    Main Layer -->
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+
+
+                       <h1 class="mt-4">학원 수강 후기</h1>
+                      <!--  <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="main.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Tables</li>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
+                                <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
+                            </div>
+                        </div>  -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                학원 수강 후기
+                            </div>
+
+
+
+                <li class="list-group-item" style="border-bottom: 1px;">
+                    <span class="article_title">
+                        <a href="javascript:popView(0);" class="btn btn-info btn-xs">구주이배 강동 카이관..</a>
+                        <a href="detailreview1522.html"><font color="#996633">강동 구주이배 리뷰</a>
+                        ★★★★ (수강중)
+                    </span>
+		    <div class="visible-xs visible-sm clearfix"></div>
+                    <span class="article_sub">
+                        <span style="color: #333; font-weight: bold;">입학가자</span> | <span style="color: #333;">2022.05.14</span>
+                    </span>
+                </li>
+                <li class="list-group-item" style="border-bottom: 1px;">
+                    <span class="article_title">
+                        <a href="javascript:popView(191957);" class="btn btn-info btn-xs">향남고려학원</a>
+                        <a href="detailreview1521.html"><font color="#996633">향남고려학원 후기</a>
+                        ★★★★ (수강후)
+                    </span>
+		    <div class="visible-xs visible-sm clearfix"></div>
+                    <span class="article_sub">
+                        <span style="color: #333; font-weight: bold;">요오</span> | <span style="color: #333;">2022.05.06</span>
+                    </span>
+                </li>
+                <li class="list-group-item" style="border-bottom: 1px;">
+                    <span class="article_title">
+                        <a href="javascript:popView(0);" class="btn btn-info btn-xs">초석학원</a>
+                        <a href="detailreview1520.html"><font color="#996633">실력향상에 좋은 학원입니다</a>
+                        ★★★★★ (수강중)
+                    </span>
+		    <div class="visible-xs visible-sm clearfix"></div>
+                    <span class="article_sub">
+                        <span style="color: #333; font-weight: bold;">강원과고지망생</span> | <span style="color: #333;">2021.10.30</span>
+                    </span>
+                </li>
+                <li class="list-group-item" style="border-bottom: 1px;">
+                    <span class="article_title">
+                        <a href="javascript:popView(108246);" class="btn btn-info btn-xs">강남메가스터디입시학원..</a>
+                        <a href="detailreview1519.html"><font color="#996633">강남 메가러셀 솔직한 후기</a>
+                        ★★★★ (수강후)
+                    </span>
+		    <div class="visible-xs visible-sm clearfix"></div>
+                    <span class="article_sub">
+                        <span style="color: #333; font-weight: bold;">이승민</span> | <span style="color: #333;">2021.02.24</span>
+                    </span>
+                </li>
+                <li class="list-group-item" style="border-bottom: 1px;">
+                    <span class="article_title">
+                        <a href="javascript:popView(0);" class="btn btn-info btn-xs">오산더하이츠학원</a>
+                        <a href="detailreview1518.html"><font color="#996633">소수 정예인데도 철저하지 못한 느낌...</a>
+                        ★ (수강중)
+                    </span>
+		    <div class="visible-xs visible-sm clearfix"></div>
+                    <span class="article_sub">
+                        <span style="color: #333; font-weight: bold;">교육과정</span> | <span style="color: #333;">2020.12.13</span>
+                    </span>
+                </li>
+                <li class="list-group-item" style="border-bottom: 1px;">
+                    <span class="article_title">
+                        <a href="javascript:popView(227757);" class="btn btn-info btn-xs">그레이스 음악학원</a>
+                        <a href="detailreview1516.html"><font color="#996633">아이들 교육에 집중하시는 원장님</a>
+                        ★★★★★ (수강중)
+                    </span>
+		    <div class="visible-xs visible-sm clearfix"></div>
+                    <span class="article_sub">
+                        <span style="color: #333; font-weight: bold;">낭만여행</span> | <span style="color: #333;">2020.11.18</span>
+                    </span>
+                </li>
+                <li class="list-group-item" style="border-bottom: 1px;">
+                    <span class="article_title">
+                        <a href="javascript:popView(227609);" class="btn btn-info btn-xs">고대영수학원</a>
+                        <a href="detailreview1515.html"><font color="#996633">고대영수학원 3년째 다니는장 단점 소개</a>
+                        ★★★ (수강중)
+                    </span>
+		    <div class="visible-xs visible-sm clearfix"></div>
+                    <span class="article_sub">
+                        <span style="color: #333; font-weight: bold;">조윤서</span> | <span style="color: #333;">2020.06.28</span>
+                    </span>
+                </li>
+                <li class="list-group-item" style="border-bottom: 1px;">
+                    <span class="article_title">
+                        <a href="javascript:popView(227567);" class="btn btn-info btn-xs">CMS목동입시센터고등관..</a>
+                        <a href="detailreview1514.html"><font color="#996633">CMS 영재센터</a>
+                        ★★★★ (수강중)
+                    </span>
+		    <div class="visible-xs visible-sm clearfix"></div>
+                    <span class="article_sub">
+                        <span style="color: #333; font-weight: bold;">이윤상</span> | <span style="color: #333;">2020.05.30</span>
+                    </span>
+                </li>
+                <li class="list-group-item" style="border-bottom: 1px;">
+                    <span class="article_title">
+                        <a href="javascript:popView(125576);" class="btn btn-info btn-xs">분당디와이비최선어학원..</a>
+                        <a href="detailreview1513.html"><font color="#996633">문법과 어휘 공부하기 좋은 영어학원</a>
+                        ★★★★ (수강중)
+                    </span>
+		    <div class="visible-xs visible-sm clearfix"></div>
+                    <span class="article_sub">
+                        <span style="color: #333; font-weight: bold;">채자매</span> | <span style="color: #333;">2020.05.29</span>
+                    </span>
+                </li>
+                <li class="list-group-item" style="border-bottom: 1px;">
+                    <span class="article_title">
+                        <a href="javascript:popView(227568);" class="btn btn-info btn-xs">더프라임수학학원</a>
+                        <a href="detailreview1512.html"><font color="#996633">더프라임수학학원을 추천합니다!</a>
+                        ★★★★★ (수강중)
+                    </span>
+		    <div class="visible-xs visible-sm clearfix"></div>
+                    <span class="article_sub">
+                        <span style="color: #333; font-weight: bold;">라비란토스</span> | <span style="color: #333;">2020.05.01</span>
+                    </span>
+                </li>
+
+
+                    </div>
+
+
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2022</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>
